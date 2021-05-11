@@ -18,55 +18,60 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container all">
       <h1>Hey, you! Have a nice day!</h1>
       <h2>Lisbon</h2>
       <h3>Friday, March 12th, 2021 | 23:19</h3>
-      <div class="row align-items-end">
-        <div class="col-2 today">
+      <div class="row today">
+        <div class="col-6 today">
           Today <br /><span id="temperature">12</span>
-          <a href="#" id="celsius">ºC</a> | <a href="#" id="fahrenheit">ºF</a>
+          <a href="#" style="text-decoration: none" id="celsius">ºC</a> |
+          <a href="#" style="text-decoration: none" id="fahrenheit">ºF</a>
         </div>
-        <div class="col-2">Tomorrow</div>
-        <div class="col-2">Monday</div>
-        <div class="col-2">Tuesday</div>
-        <div class="col-2">Wednesday</div>
-        <div class="col-2">Thursday</div>
+        <div class="col-6 forecast">
+          Min 8º C <br />
+          High 15º C <br />
+          Icon placeholder
+        </div>
       </div>
-      <div class="row middle top">
-        <div class="col-2 today">Min 8 ºC</div>
-        <div class="col-2">Min 6 ºC</div>
-        <div class="col-2">Min 8 ºC</div>
-        <div class="col-2">Min 9 ºC</div>
-        <div class="col-2">Min 10 ºC</div>
-        <div class="col-2">Min 8 ºC</div>
-      </div>
-      <div class="row middle bottom">
-        <div class="col-2 today">High 15 ºC</div>
-        <div class="col-2">High 14 ºC</div>
-        <div class="col-2">High 16 ºC</div>
-        <div class="col-2">High 17 ºC</div>
-        <div class="col-2">High 18 ºC</div>
-        <div class="col-2">High 15 ºC</div>
-      </div>
-      <div class="row align-items-start">
-        <div class="col-2 today">
-          <i class="fas fa-cloud-showers-heavy"></i>
+      <div class="container px-5 py-5">
+        <div class="row align-items-end">
+          <div class="col mx-1">Monday</div>
+          <div class="col mx-1">Tuesday</div>
+          <div class="col mx-1">Wednesday</div>
+          <div class="col mx-1">Thursday</div>
+          <div class="col mx-1">Friday</div>
         </div>
-        <div class="col-2">
-          <i class="fas fa-cloud-showers-heavy"></i>
+        <div class="row middle top">
+          <div class="col mx-1">Min 6 ºC</div>
+          <div class="col mx-1">Min 8 ºC</div>
+          <div class="col mx-1">Min 9 ºC</div>
+          <div class="col mx-1">Min 10 ºC</div>
+          <div class="col mx-1">Min 8 ºC</div>
         </div>
-        <div class="col-2">
-          <i class="fas fa-sun"></i>
+        <div class="row middle bottom">
+          <div class="col mx-1">High 14 ºC</div>
+          <div class="col mx-1">High 16 ºC</div>
+          <div class="col mx-1">High 17 ºC</div>
+          <div class="col mx-1">High 18 ºC</div>
+          <div class="col mx-1">High 15 ºC</div>
         </div>
-        <div class="col-2">
-          <i class="fas fa-sun"></i>
-        </div>
-        <div class="col-2">
-          <i class="fas fa-cloud-showers-heavy"></i>
-        </div>
-        <div class="col-2">
-          <i class="fas fa-cloud-showers-heavy"></i>
+        <div class="row align-items-start">
+          <div class="col mx-1">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </div>
+          <div class="col mx-1">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="col mx-1">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="col mx-1">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </div>
+          <div class="col mx-1">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </div>
         </div>
       </div>
       <div class="row search">
