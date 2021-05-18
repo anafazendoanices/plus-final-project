@@ -38,42 +38,21 @@ let minutes = now.getMinutes();
 
 formatdate();
 
-//
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("h2");
+  let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind");
 
-function searchCity(event) {
-  event.preventDefault();
-  let input = document.querySelector("#city");
-  city.innerHTML = `${input.value}`;
-
-  let apiKey = "ca3ccc787fe9a31582c95a99cdb93498";
-  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
-
-  axios
-    .get(`${apiUrl}${input.value}&units=metric&appid=${apiKey}`)
-    .then(displayTemp);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
 
-function displayTemp(response) {
-  let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
-}
+let apiKey = "ca3ccc787fe9a31582c95a99cdb93498";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
 
-function currentLocation(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiPositionKey = "ca3ccc787fe9a31582c95a99cdb93498";
-  let apiPositionUrl = `https://api.openweathermap.org/data/2.5/weather?&units=metric&lat=${latitude}&lon=${longitude}`;
-  axios.get(`${apiPositionUrl}&appid=${apiPositionKey}`).then(displayTemp);
-}
-
-function displayCity(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(currentLocation);
-}
-
-let city = document.querySelector("h2");
-let searchEngine = document.querySelector("#search");
-searchEngine.addEventListener("submit", searchCity);
-
-let currentLoc = document.querySelector("button");
-currentLoc.addEventListener("click", displayCity);
+axios.get(apiUrl).then(displayTemperature);

@@ -40,6 +40,10 @@ form {
   color: #767676;
 }
 
+#city {
+  font-size: 13px;
+}
+
 .container.all {
   margin: 100px auto;
   border: 3px none #f4f9f9;
@@ -62,8 +66,23 @@ form {
   padding: 0;
 }
 
-.col-6.forecast {
+.col-6 {
+  text-align: center;
+}
+
+.col-6.today {
+  font-size: 24px;
+}
+
+li {
   text-align: left;
+  font-size: 13px;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.container.px-5.py-5 {
+  text-align: center;
 }
 
 .row.align-items-end {
@@ -85,6 +104,6 @@ form {
   font-size: 17px;
 }
 
-.col-2.today {
-  font-size: 24px;
+.col-6 {
+  text-align: center;
 }
