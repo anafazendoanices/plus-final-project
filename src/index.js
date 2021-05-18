@@ -44,12 +44,14 @@ function displayTemperature(response) {
   let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 let apiKey = "ca3ccc787fe9a31582c95a99cdb93498";
