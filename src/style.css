@@ -77,8 +77,11 @@ form {
 li {
   text-align: left;
   font-size: 13px;
-  text-transform: capitalize;
   list-style: none;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .container.px-5.py-5 {
