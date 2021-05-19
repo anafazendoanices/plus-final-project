@@ -107,6 +107,8 @@ li:first-letter {
   font-size: 17px;
 }
 
-.col-6 {
+.mb-3 {
   text-align: center;
+  padding: 0;
+  margin-left: 40px;
 }
