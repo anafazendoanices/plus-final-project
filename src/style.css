@@ -121,3 +121,8 @@ li:first-letter {
   padding: 0;
   margin-left: 40px;
 }
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
