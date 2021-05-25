@@ -29,19 +29,18 @@ form {
   text-align: right;
 }
 
+#city {
+  font-size: 13px;
+}
+
+#linkedin {
+  text-decoration: none;
+}
+
 #github {
   display: block;
   text-align: center;
-  font-size: 8px;
-}
-
-.btn.btn-light {
-  font-size: 13px;
-  color: #767676;
-}
-
-#city {
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .container.all {
