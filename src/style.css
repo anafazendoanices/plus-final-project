@@ -93,27 +93,17 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-.container.px-5.py-5 {
+.forecast {
   text-align: center;
-}
-
-.row.align-items-end {
-  margin-top: 1px;
-}
-
-.row.middle {
-  font-size: 10px;
-  padding: 0;
-}
-
-.row.middle .col-2.today {
+  margin-top: 20px;
   font-size: 12px;
+  padding: 0;
+  margin-bottom: 50px;
 }
 
-.row.align-items-start {
-  margin-bottom: 20px;
-  padding: 0;
-  font-size: 17px;
+.weather-forecast-date,
+.weather-forecast-temperature-max {
+  font-weight: bold;
 }
 
 .mb-3 {
