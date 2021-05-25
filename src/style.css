@@ -73,15 +73,6 @@ form {
   font-size: 24px;
 }
 
-.col-4.today .active {
-  color: #ffffff;
-  cursor: default;
-}
-
-.col-4.today .active:hover {
-  text-decoration: none;
-}
-
 .col-4.forecast {
   text-align: left;
   font-size: 13px;
