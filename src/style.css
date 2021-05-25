@@ -33,7 +33,8 @@ form {
   font-size: 13px;
 }
 
-#linkedin {
+#linkedin,
+#netlify {
   text-decoration: none;
 }
 
